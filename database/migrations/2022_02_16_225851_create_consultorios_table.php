@@ -18,7 +18,7 @@ class CreateConsultoriosTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('consultorio');
+        Schema::dropIfExists('consultorios');
     }
 }
 

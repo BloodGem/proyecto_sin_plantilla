@@ -43,11 +43,12 @@ document.addEventListener('DOMContentLoaded', function() {
             (respuesta) =>{
     
                 formulario.id.value= respuesta.data.id;
-                formulario.paciente.value= respuesta.data.paciente;
+                formulario.id_paciente.value= respuesta.data.id_paciente;
+                formulario.id_odontologo.value= respuesta.data.id_odontologo;
                 formulario.comentario.value= respuesta.data.comentario;
                 formulario.start.value= respuesta.data.start;
                 formulario.end.value= respuesta.data.end;
-    
+                formulario.estatus.value= respuesta.data.estatus;
                 $("#cita").modal("show");
             }
             ).catch(

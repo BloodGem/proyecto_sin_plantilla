@@ -20,9 +20,11 @@ class ServicioController extends Controller
         $busqueda=trim($request->get('busqueda'));
 
         $serv = Servicio::select("*")
+        ->where('id_categoria',1)
         ->where('name','LIKE','%'.$busqueda.'%')
         ->orWhere('description','LIKE','%'.$busqueda.'%')
         ->orWhere('price','LIKE','%'.$busqueda.'%')
+        
         ->orderBy('created_at', request('sorted', 'DESC'))->paginate(10);
         
         return view('servicios.index', compact('serv','busqueda'));
@@ -39,20 +41,12 @@ class ServicioController extends Controller
 
 
     public function store(Request $request)
-    {
-       //request()->validate(servicios::$rules);
-
-        /*$servi = servicios::create($request->all());
-        $servi->save();
-        return redirect()->route('servicios.index')
-            ->with('success', 'Service created successfully.');*/
-    
-       // METODO FUNCIONAL DEL GUARDADO DE DATOS 
+    { 
         $serv2 = new servicio();
-        //$serv2->id = $request->id;
         $serv2->name = $request->name;
         $serv2->description = $request->description;
         $serv2->price = $request->price;
+        $serv2->id_categoria = $request->id_categoria;
         $serv2->save();
         return redirect()->route('servicios.index')
             ->with('success', 'Service created successfully.');
@@ -76,23 +70,16 @@ class ServicioController extends Controller
 
     public function update(Request $request, $id)
     {
-       /* Servicios::findOrFail($id)->update($request->all());//ESTE ES CON ELOQUENT
 
-        return redirect()->route('servicios.index');*/
         $servicio_update = Servicio::find($id);
-        //$servicio_update->id = $request->input('id');
         $servicio_update->name = $request->input('name');
         $servicio_update->description = $request->input('description');
         $servicio_update->price = $request->input('price');
+        $servicio_update->id_categoria = $request->input('id_categoria');
         $servicio_update->save();
         return redirect()->route('servicios.index');
     }
 
-    /**
-     * @param int $id
-     * @return \Illuminate\Http\RedirectResponse
-     * @throws \Exception
-     */
     public function destroy($id)
     {
         $ser = Servicio::findOrFail($id)->delete();

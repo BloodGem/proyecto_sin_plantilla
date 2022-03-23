@@ -34,18 +34,6 @@
                 <table class="table table-hover table-bordered">
                     <thead>
                         <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido Paterno</th>
-                            <th scope="col">Apellido Materno</th>
-                            <th scope="col">RFC</th>
-                            <th scope="col">CURP</th>
-                            <th scope="col">Fecha de Nacimiento</th>
-                            <th scope="col">Calle</th>
-                            <th scope="col">Núm. Int.</th>
-                            <th scope="col">Núm. Ext.</th>
-                            <th scope="col">Colonia</th>
-                            <th scope="col">Municipio</th>
-                            <th scope="col">Código Postal</th>
                             <th scope="col">Email</th>
                             <th scope="col">Estatus</th>
                             <th scope="col">Rol</th>
@@ -56,90 +44,6 @@
                         @foreach ($usuarios as $usuario)
                         <tr class="text-center">
                             
-                            <td class="p-0">
-                                <div class="p-3">
-                                    <p class="mb-0 text-capitalize">
-                                        {{ $usuario->name }}
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="p-0">
-                                <div class="p-3">
-                                    <p class="mb-0 text-capitalize">
-                                        {{ $usuario->apellido_p }}
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="p-0">
-                                <div class="p-3">
-                                    <p class="mb-0 text-capitalize">
-                                        {{ $usuario->apellido_m}}
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="p-0">
-                                <div class="p-3">
-                                    <p class="mb-0 text-capitalize">
-                                        {{ $usuario->rfc }}
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="p-0">
-                                <div class="p-3">
-                                    <p class="mb-0 text-capitalize">
-                                        {{ $usuario->curp }}
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="p-0">
-                                <div class="p-3">
-                                    <p class="mb-0 text-capitalize">
-                                        {{ $usuario->fecha_nacimiento }}
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="p-0">
-                                <div class="p-3">
-                                    <p class="mb-0 text-capitalize">
-                                        {{ $usuario->calle }}
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="p-0">
-                                <div class="p-3">
-                                    <p class="mb-0 text-capitalize">
-                                        {{ $usuario->num_int }}
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="p-0">
-                                <div class="p-3">
-                                    <p class="mb-0 text-capitalize">
-                                        {{ $usuario->num_ext }}
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="p-0">
-                                <div class="p-3">
-                                    <p class="mb-0 text-capitalize">
-                                        {{ $usuario->colonia }}
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="p-0">
-                                <div class="p-3">
-                                    <p class="mb-0 text-capitalize">
-                                        {{ $usuario->municipio }}
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="p-0">
-                                <div class="p-3">
-                                    <p class="mb-0 text-capitalize">
-                                        {{ $usuario->cp }}
-                                    </p>
-                                </div>
-                            </td>
                             <td class="p-0">
                                 <div class="p-3">
                                     <p class="mb-0 text-capitalize">

@@ -20,16 +20,17 @@ class CrearTablaPacientes extends Migration
             $table->string("apellido_m");
             $table->string("rfc");
             $table->string("curp");
-            $table->date("fecha_de_nacimiento");
+            $table->date("fecha_nacimiento");
             $table->string("calle");
             $table->string("num_int");
             $table->string("num_ext");
-            $table->string("localidad");
+            $table->string("colonia");
             $table->string("municipio");
-            $table->string("codigo_postal");
-            $table->string("correo_electronico");
-            $table->string("contrasena");
-            $table->integer("estatus");
+            $table->string("cp");
+            $table->string("estado");
+            $table->string("telefono");
+            $table->string("celular");
+            $table->integer("id_usuario");
             $table->timestamps();
         });
     }

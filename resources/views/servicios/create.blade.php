@@ -27,6 +27,12 @@
                                 placeholder="Ingrese el costo del servicio" required>
                         </div>
                     </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="price">Id categoria</label>
+                            <input type="text" class="form-control" id="id_categoria" name="id_categoria" required>
+                        </div>
+                    </div>
                     <div class="col-12 text-end">
                         <a href="{{ route('servicios.index') }}"><button type="button" class="btn btn-danger">Regresar</button></a>
                         <button type="submit" class="btn btn-success">Crear Servicio</button>

@@ -1,0 +1,2 @@
+{{Cart::created($ventas->venta)}} 
+

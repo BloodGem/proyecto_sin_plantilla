@@ -19,7 +19,6 @@ class ConsultoriosController extends Controller
 
     public function create()
     {
-
         $dentistas = User::all()->where('rol','Dentista');
         
         return view('consultorios.create', compact('dentistas'));

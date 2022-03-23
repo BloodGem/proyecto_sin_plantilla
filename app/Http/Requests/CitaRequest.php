@@ -24,10 +24,10 @@ class CitaRequest extends FormRequest
     public function rules()
     {
         return [
-            'paciente'=> ['required'],
             'comentario'=> ['required'],
             'start'=> ['required'],
             'end'=> ['required'],
+            'id_paciente'=> ['required'],
         ];
     }
 }

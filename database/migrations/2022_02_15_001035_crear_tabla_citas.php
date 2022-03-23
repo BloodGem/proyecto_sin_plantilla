@@ -15,10 +15,13 @@ class CrearTablaCitas extends Migration
     {
         Schema::create('citas', function (Blueprint $table) {
             $table->id();
-            $table->string('paciente');
             $table->string('comentario');
-            $table->date('start');
-            $table->date('end');
+            $table->string('hora');
+            $table->datetime('start');
+            $table->datetime('end');
+            $table->integer('id_odontologo');
+            $table->string('estatus');
+            $table->integer('id_paciente');
             $table->timestamps();
         });
     }

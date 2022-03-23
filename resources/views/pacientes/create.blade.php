@@ -23,9 +23,9 @@
     <div class="box-body">
         
         <div class="form-group">
-            <label for="text" >{{('Nombre') }}</label>
-            <input id="nombre" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" required autocomplete="nombre" placeholder="Nombre" autofocus>
-            @error('Nombre')
+            <label for="nombre" >{{('Nombre(s)') }}</label>
+            <input id="nombre" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" required autocomplete="nombre" autofocus>
+            @error('nombre')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -33,9 +33,9 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Apellido_P') }}</label>
-            <input id="apellido_p" type="text" class="form-control @error('apellido_p') is-invalid @enderror" name="apellido_p" value="{{ old('apellido_p') }}" required autocomplete="apellido_p" placeholder="Apellido_P">
-            @error('Apellido_P')
+            <label for="apellido_p" >{{('Apellido Paterno') }}</label>
+            <input id="apellido_p" type="text" class="form-control @error('apellido_p') is-invalid @enderror" name="apellido_p" value="{{ old('apellido_p') }}" required autocomplete="apellido_p">
+            @error('apellido_p')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -43,9 +43,9 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Apellido_M') }}</label>
-            <input id="apellido_m" type="text" class="form-control @error('apellido_m') is-invalid @enderror" name="apellido_m" value="{{ old('apellido_m') }}" required autocomplete="apellido_m" placeholder="Apellido_M">
-            @error('Apellido_M')
+            <label for="apellido_m" >{{('Apellido Materno') }}</label>
+            <input id="apellido_m" type="text" class="form-control @error('apellido_m') is-invalid @enderror" name="apellido_m" value="{{ old('apellido_m') }}" required autocomplete="apellido_m" >
+            @error('apellido_m')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -53,9 +53,9 @@
         </div>
         
         <div class="form-group">
-            <label for="text" >{{('RFC') }}</label>
-            <input id="rfc" type="text" class="form-control @error('rfc') is-invalid @enderror" name="rfc" value="{{ old('rfc') }}" required autocomplete="rfc" placeholder="Rfc">
-            @error('Rfc')
+            <label for="rfc" >{{('RFC') }}</label>
+            <input id="rfc" type="text" class="form-control @error('rfc') is-invalid @enderror" name="rfc" value="{{ old('rfc') }}" required autocomplete="rfc">
+            @error('rfc')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -63,9 +63,9 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Curp') }}</label>
-            <input id="curp" type="text" class="form-control @error('curp') is-invalid @enderror" name="curp" value="{{ old('curp') }}" required autocomplete="curp" placeholder="Curp">
-            @error('Curp')
+            <label for="curp" >{{('CURP') }}</label>
+            <input id="curp" type="text" class="form-control @error('curp') is-invalid @enderror" name="curp" value="{{ old('curp') }}" required autocomplete="curp">
+            @error('curp')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -73,9 +73,9 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Fecha_de_nacimiento') }}</label>
-            <input id="fecha_de_nacimiento" type="date" class="form-control @error('fecha_de_nacimiento') is-invalid @enderror" name="fecha_de_nacimiento" value="{{ old('fecha_de_nacimiento') }}" required autocomplete="fecha_de_nacimiento" placeholder="Fecha_de_nacimiento">
-            @error('fecha_de_nacimiento')
+            <label for="fecha_nacimiento" >{{('Fecha de Nacimiento') }}</label>
+            <input id="fecha_nacimiento" type="date" class="form-control @error('fecha_nacimiento') is-invalid @enderror" name="fecha_nacimiento" value="{{ old('fecha_nacimiento') }}" required autocomplete="fecha_nacimiento">
+            @error('fecha_nacimiento')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -83,9 +83,9 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Calle') }}</label>
-            <input id="calle" type="text" class="form-control @error('calle') is-invalid @enderror" name="calle" value="{{ old('calle') }}" required autocomplete="calle" placeholder="Calle">
-            @error('Calle')
+            <label for="calle" >{{('Calle') }}</label>
+            <input id="calle" type="text" class="form-control @error('calle') is-invalid @enderror" name="calle" value="{{ old('calle') }}" required autocomplete="calle">
+            @error('calle')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -93,9 +93,9 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Num_int') }}</label>
-            <input id="num_int" type="text" class="form-control @error('num_int') is-invalid @enderror" name="num_int" value="{{ old('num_int') }}" required autocomplete="num_int" placeholder="Num_int">
-            @error('Num_int')
+            <label for="num_int" >{{('Número Exterior') }}</label>
+            <input id="num_int" type="text" class="form-control @error('num_int') is-invalid @enderror" name="num_int" value="{{ old('num_int') }}" required autocomplete="num_int">
+            @error('num_int')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -103,9 +103,9 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Num_ext') }}</label>
-            <input id="num_ext" type="text" class="form-control @error('num_ext') is-invalid @enderror" name="num_ext" value="{{ old('num_ext') }}" required autocomplete="num_ext" placeholder="Num_ext">
-            @error('Num_ext')
+            <label for="num_ext" >{{('Num_ext') }}</label>
+            <input id="num_ext" type="text" class="form-control @error('num_ext') is-invalid @enderror" name="num_ext" value="{{ old('num_ext') }}" required autocomplete="num_ext">
+            @error('num_ext')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -113,9 +113,9 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Localidad') }}</label>
-            <input id="localidad" type="text" class="form-control @error('localidad') is-invalid @enderror" name="localidad" value="{{ old('localidad') }}" required autocomplete="localidad" placeholder="Localidad">
-            @error('Localidad')
+            <label for="colonia" >{{('colonia') }}</label>
+            <input id="colonia" type="text" class="form-control @error('colonia') is-invalid @enderror" name="colonia" value="{{ old('colonia') }}" required autocomplete="colonia">
+            @error('colonia')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -123,8 +123,8 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Municipio') }}</label>
-            <input id="municipio" type="text" class="form-control @error('municipio') is-invalid @enderror" name="municipio" value="{{ old('municipio') }}" required autocomplete="municipio" placeholder="Municipio">
+            <label for="municipio" >{{('Municipio') }}</label>
+            <input id="municipio" type="text" class="form-control @error('municipio') is-invalid @enderror" name="municipio" value="{{ old('municipio') }}" required autocomplete="municipio">
             @error('Municipio')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -133,9 +133,9 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Codigo_postal') }}</label>
-            <input id="codigo_postal" type="text" class="form-control @error('codigo_postal') is-invalid @enderror" name="codigo_postal" value="{{ old('codigo_postal') }}" required autocomplete="codigo_postal" placeholder="Codigo_postal">
-            @error('Codigo_postal')
+            <label for="cp" >{{('Código Postal') }}</label>
+            <input id="cp" type="text" class="form-control @error('cp') is-invalid @enderror" name="cp" value="{{ old('cp') }}" required autocomplete="cp">
+            @error('cp')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -143,9 +143,9 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Correo_electronico') }}</label>
-            <input id="correo_electronico" type="email" class="form-control @error('correo_electronico') is-invalid @enderror" name="correo_electronico" value="{{ old('correo_electronico') }}" required autocomplete="correo_electronico" placeholder="Correo_electronico">
-            @error('Correo_electronico')
+            <label for="estado" >{{('Estado') }}</label>
+            <input id="estado" type="text" class="form-control @error('estado') is-invalid @enderror" name="estado" value="{{ old('estado') }}" required autocomplete="estado">
+            @error('estado')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -153,9 +153,9 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Contraseña') }}</label>
-            <input id="contrasena" type="password" class="form-control @error('contrasena') is-invalid @enderror" name="contrasena" value="{{ old('contrasena') }}" required autocomplete="contrasena" placeholder="Contraseña">
-            @error('contrasena')
+            <label for="telefono" >{{('Teléfono') }}</label>
+            <input id="telefono" type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" value="{{ old('telefono') }}" required autocomplete="telefono">
+            @error('telefono')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -163,9 +163,9 @@
         </div>
 
         <div class="form-group">
-            <label for="text" >{{('Estatus') }}</label>
-            <input id="estatus" type="text" class="form-control @error('estatus') is-invalid @enderror" name="estatus" value="{{ old('estatus') }}" required autocomplete="estatus" placeholder="Estatus">
-            @error('Estatus')
+            <label for="celular" >{{('Celular') }}</label>
+            <input id="celular" type="text" class="form-control @error('celular') is-invalid @enderror" name="celular" value="{{ old('celular') }}" required autocomplete="celular">
+            @error('celular')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -178,9 +178,6 @@
         <tr>
             <td>
         <button type="submit" class="btn btn-primary">Guardar</button>
-            </td>
-            <td>
-        <a class="btn btn-primary" href="{{ route('pacientes.index') }}"> Regresar</a>
             </td>
         </tr>
     </tbody>

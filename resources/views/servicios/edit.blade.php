@@ -28,6 +28,12 @@
                                 placeholder="Ingrese el costo del servicio" required>
                         </div>
                     </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="price">Id catrgoria</label>
+                            <input type="text" step="0.01" class="form-control" id="id_categoria" name="id_categoria" value="{{$servi->id_categoria}}" required>
+                        </div>
+                    </div>
                     <div class="col-12 text-end">
                         <a href="{{ route('servicios.index') }}"><button type="button" class="btn btn-danger">Regresar</button></a>
                         <button type="submit" class="btn btn-success">Guardar cambios</button>

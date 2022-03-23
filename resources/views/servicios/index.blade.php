@@ -37,6 +37,7 @@
                             <th scope="col">Servicio</th>
                             <th scope="col">Descripción</th>
                             <th scope="col">Costo</th>
+                            <th scope="col">Id Categoria</th>
                             <th scope="col" colspan="2">Acciones</th>
                         </tr>
                     </thead>
@@ -68,6 +69,13 @@
                                 <div class="p-3">
                                     <p class="mb-0 text-capitalize">
                                         {{$servicio->price}}
+                                    </p>
+                                </div>
+                            </td>
+                            <td class="p-0">
+                                <div class="p-3">
+                                    <p class="mb-0 text-capitalize">
+                                        {{$servicio->id_categoria}}
                                     </p>
                                 </div>
                             </td>

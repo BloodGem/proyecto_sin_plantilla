@@ -11,9 +11,6 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h3 class="card-title">{{$user->name}} {{$user->apellido_p}} {{$user->apellido_m}}</h3>
-                <p class="card-text"><strong>RFC: </strong>{{$user->rfc}}                      CURP: </strong>{{$user->curp}}</p>
-                <p class="card-text">Dirección: Calle {{$user->calle}} no.{{$user->num_ext}} de {{$user->colonia}} {{$user->localidad}} {{$user->municipio}} {{$user->cp}}</p>
                 <p class="card-text"><small class="text-muted">{{$user->email}}</small></p>
               </div>
             </div>

@@ -1,81 +1,192 @@
-
 @extends('layouts.app')
-
-@section('template_title')
-    Paciente
-@endsection
-
 @section('content')
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="card m-5">
+        <div class="card-body pb-0">
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <div
+                            class="collapse navbar-collapse d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
+                            <div class="col-12 col-md-auto justify-content-center">
+                                <div class="input-group">
+                             
+                                        <form action="{{route('pacientes.index')}}" method="GET">
+                                            <input type="search" class="form-control" name="busqueda" value="{{$busqueda}}">
+                                            <button type="submit" class="btn btn-primary">Buscar</button>
+                                                            </form>
+                                                            
+                                </div>
+                            </div>
 
-                            <span id="card_title">
-                                {{ __('Paciente') }}
-                            </span>
-
-                             <div class="float-right">
-                                <a href="{{ route('pacientes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Nuevo') }}
-                                </a>
-                              </div>
+                            <div class="col-md-3 text-end">
+                                <div class="btn-group rounded">
+                                    <a href="{{ route('pacientes.create') }}">
+                                        <button type="button" class="btn btn-success">Crear Paciente</button>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{ $message }}</p>
-                        </div>
-                    @endif
-
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-hover">
-                                <thead class="thead">
+                </nav>
+            </div>
+            <div class="table-responsive mx-2">
+                <table class="table table-hover table-bordered">
+                    <thead>
                                     <tr>
                                         
 										<th>Id Paciente</th>
-										<th>Nombre</th>
-										<th>Apellido P</th>
-										<th>Apellido M</th>
-										<th>Rfc</th>
-										<th>Curp</th>
-										<th>Fecha De Nacimiento</th>
-										<th>Calle</th>
-										<th>Num Int</th>
-										<th>Num Ext</th>
-										<th>Localidad</th>
-										<th>Municipio</th>
-										<th>Codigo Postal</th>
-										<th>Correo Electronico</th>
-										<th>Contraseña</th>
-										<th>Estatus</th>
-
-                                        <th></th>
+							            <th scope="col">Nombre</th>
+							            <th scope="col">Apellido P</th>
+							            <th scope="col">Apellido M</th>
+							            <th scope="col">Rfc</th>
+							            <th scope="col">Curp</th>
+                                        <th scope="col">Teléfono</th>
+                                        <th scope="col">Celular</th>
+							            <th scope="col">Fecha De Nacimiento</th>
+							            <th scope="col">Calle</th>
+							            <th scope="col">Num Int</th>
+							            <th scope="col">Num Ext</th>
+							            <th scope="col">Localidad</th>
+							            <th scope="col">Municipio</th>
+							            <th scope="col">Codigo Postal</th>
+                                        <th scope="col">Estado</th>
+                                        <th scope="col">Id_usuario</th>
+                                        <th scope="col" colspan="3">Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($pacientes as $paciente)
                                         <tr>
-                                            
-											<td>{{ $paciente->id }}</td>
-											<td>{{ $paciente->nombre }}</td>
-											<td>{{ $paciente->apellido_p }}</td>
-											<td>{{ $paciente->apellido_m }}</td>
-											<td>{{ $paciente->rfc }}</td>
-											<td>{{ $paciente->curp }}</td>
-											<td>{{ $paciente->fecha_de_nacimiento }}</td>
-											<td>{{ $paciente->calle }}</td>
-											<td>{{ $paciente->num_int }}</td>
-											<td>{{ $paciente->num_ext }}</td>
-											<td>{{ $paciente->localidad }}</td>
-											<td>{{ $paciente->municipio }}</td>
-											<td>{{ $paciente->codigo_postal }}</td>
-											<td>{{ $paciente->correo_electronico }}</td>
-											<td>{{ $paciente->contraseña }}</td>
-											<td>{{ $paciente->estatus }}</td>
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->id}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->nombre}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->apellido_p}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->apellido_m}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->rfc}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->curp}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->telefono}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->celular}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->fecha_nacimiento}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->calle}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->num_int}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->num_ext}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->colonia}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->municipio}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->cp}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->estado}}
+                                                    </p>
+                                                </div>
+                                            </td>
+                
+                                            <td class="p-0">
+                                                <div class="p-3">
+                                                    <p class="mb-0 text-capitalize">
+                                                        {{$paciente->id_usuario}}
+                                                    </p>
+                                                </div>
+                                            </td>
 
                                             <td>
                                                 <form action="{{ route('pacientes.destroy',$paciente->id) }}" method="POST">
